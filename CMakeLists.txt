@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 3.10)
 
 # Define your project name and language
-project(GraphEditor VERSION 1.0 LANGUAGES CXX)
+project(GraphEditor VERSION 1.0 LANGUAGES CXX C)
 
 # Standard C++ settings (e.g., C++17 standard)
 set(CMAKE_CXX_STANDARD 17)
@@ -38,8 +38,7 @@ add_executable(Bambuu ${SOURCES})
 # These are the equivalents of -lglfw -lopengl32 -lgdi32 on MinGW/Windows
 target_link_libraries(Bambuu PUBLIC
     glfw
-    opengl32
-    glu32
+    GL
 )
 
 target_include_directories(Bambuu
